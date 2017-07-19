@@ -1,21 +1,31 @@
-//@import "./normalize";
+@import "./base/normalize";
 @import "./base/variables";
 @import "./base/_mixins";
+
 html {
   @include size();
+
+  box-sizing: border-box;
   font-size: $root-size;
+  color: $dark-grey;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
 
 body {
-  @include flexbox("center");
   @include size();
-  margin: 0;
+  @include flexbox(center);
+  
   overflow: hidden;
-  background: linear-gradient(to right, $home-03, $home-03) 850px 0px no-repeat, linear-gradient(to right, $home-02, $home-02) 750px 0px no-repeat, linear-gradient(to right, $home-01, $home-01);
   font: {
-    family: $poppins-font;
+    family: $lato-font;
     size: $base-size;
     weight: $regular-weight;
+    line-height: 18px;
   }
 }
 
@@ -34,49 +44,98 @@ button {
   outline: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-background {
+  background: $home-gradient;
+}
+
+.skill-background { 
+  background: $skill-gradient;
+}
+
+.project-background { 
+  background: $project-gradient;
+}
+
 .container {
+  @include size(65%, 65%);
   @include flexbox();
-  height: 70%;
-  width: 65%;
+  @include box-shadow();
+  
   background-color: $white;
 
-  flex-flow: row wrap;
+  @include align-items(stretch);
+  @include align-content(stretch);
 
   .aside {
+    @include size(100%, 41.20%);
     @include flexbox();
+    
     background-color: $home-02;
-    height: 100%;
-    width: 41.20%;
 
-    main {
-      height: 100%;
-      width: 100%;
-    }
-
-    .nav {
+    .developer {
+      @include size(100%, 100%);
       @include flexbox();
-      flex-direction: column;
-      height: 100%;
-      width: 125px;
-      background-color: $light-grey;
-      list-style-type: none;
+      @include align-items(flex-end);
 
-      &__item {
-        @include flexbox("center");
-        height: 125px;
-        width: 100%;
-        color: $grey;
+      text-align: center;
 
-        &:hover {
-          background-color: $bright-yellow;
-          color: $white;
-        }
+      footer {
+        @include size(50px);
+        color: $white;
       }
     }
   }
 
   section {
-    height: 100%;
-    width: 58.80%;
+    @include size(100%, 41.20%);
+    @include flex-grow(1);
+    
+    padding: 50px 70px;
+  }
+}
+
+.nav {
+  @include flexbox();
+  flex-direction: column;
+  height: 100%;
+  width: 125px;
+  background-color: $light-grey;
+  list-style-type: none;
+
+  &__item {
+    @include flexbox("center");
+    height: 125px;
+    width: 100%;
+    color: $grey;
+
+    &:hover {
+      background-color: $🧀;
+      color: $white;
+    }
+  }
+}
+
+.home {
+  &__title {
+    font: {
+      family: 'Lato';
+      size: $title-size;
+      weight: $black-weight;
+    }
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font: {
+      family: 'Lato';
+      weight: $light-weight;
+    }
+    line-height: 25px;
   }
 }

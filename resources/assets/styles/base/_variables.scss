@@ -1,26 +1,41 @@
 // Colors
 $white: #fff !default;
-$grey: #8A8A8A !default;
 $light-grey: #EEE !default;
+$grey: #8A8A8A !default;
 $dark-grey: #333 !default;
-$bright-yellow: #F4B90A !default;
-$project-01: #4E8DC8 !default;
-$project-02: #5BA7EB !default;
-$project-03: #3F77A5 !default;
-$skill-01: #3F55A5 !default;
-$skill-02: #4E5AC8 !default;
-$skill-03: #5B5CEB !default;
-$home-01: #4F3FA5 !default;
-$home-02: #604EC8 !default;
-$home-03: #715BEB !default;
+$🧀: #F4B90A !default;
+
+$home-01:    #4F3FA5 !default;
+$home-02:    #604EC8 !default;
+$home-03:    #715BEB !default;
+$home-gradient:     linear-gradient(to right, $home-03, $home-03) 850px 0px no-repeat, 
+            linear-gradient(to right, $home-02, $home-02) 750px 0px no-repeat, 
+            linear-gradient(to right, $home-01, $home-01);
+
+
+$skill-01:   #3F55A5 !default;
+$skill-02:   #4E5AC8 !default;
+$skill-03:   #5B5CEB !default;
+$skill-gradient:    linear-gradient(to right, $skill-03, $skill-03) 850px 0px no-repeat, 
+           linear-gradient(to right, $skill-02, $skill-02) 750px 0px no-repeat, 
+           linear-gradient(to right, $skill-01, $skill-01);
+
+$project-01:   #4E8DC8 !default;
+$project-02:   #5BA7EB !default;
+$project-03:   #3F77A5 !default;
+$project-gradient:    linear-gradient(to right, $project-03, $project-03) 850px 0px no-repeat, 
+           linear-gradient(to right, $project-02, $project-02) 750px 0px no-repeat, 
+           linear-gradient(to right, $project-01, $project-01);
+
 
 //fonts
-$poppins-font: 'Poppins', sans-serif !default;
-$roboto-font: 'Roboto', sans-serif !default;
+$lato-font: 'lato', sans-serif !default;
 $light-weight: 300 !default;
 $regular-weight: 400 !default;
 $medium-weight: 500 !default;
 $semi-bold-weight: 600 !default;
 $bold-weight: 700 !default;
-$root-size: 15px !default;
+$black-weight: 900 !default;
+$root-size: 20px !default;
 $base-size: 1rem !default;
+$title-size: 33px !default;
