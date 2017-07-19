@@ -12,12 +12,12 @@
     height: 100%;
     @if $i == 1 {
       @include justify-content(flex-end);
-      width: 40%;
+      width: 37%;
     } @else if $i == 2 {
       width: 100px;
     } @else if $i == 3 {
       @include justify-content(flex-start);
-      width: calc(60% - 100px);
+      width: calc(63% - 100px);
     }
 
     @if $page == 'home' {
@@ -28,6 +28,15 @@
         background-color: nth($project, $i);
     }
   }
+}
+
+@mixin transition($speed: 1s){
+  -webkit-transition: all $speed ease-in-out;
+  -moz-transition: all $speed ease-in-out;
+  transition: all $speed ease-in-out;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @mixin box-shadow($el) {
@@ -46,37 +55,23 @@
   }
 }
 
-@mixin bp($point) {
-  @if $point==xl {
-    // 1050px
-    @media (max-width: 65.625rem) {
-      @content;
+// Mixin to control breakpoints
+@mixin mq($value, $type: max, $sizeOf: width) {
+    @if map_has_key($breakpoints, $value) {
+        $value: map_get($breakpoints, $value);
+        @if $type == max {
+            $value: $value - 1px;
+        }
+        @media only screen and (#{$type}-#{$sizeOf}: $value) {
+            @content;
+        }
     }
-  }
-  @else if $point==lg {
-    // 900px
-    @media (max-width: 56.25rem) {
-      @content;
+}
+
+@mixin mq-range($min-width, $max-width) {
+    @media only screen and (min-device-width: $min-width) and (max-device-width: $max-width) {
+        @content;
     }
-  }
-  @else if $point==md {
-    // 768px
-    @media (max-width: 48rem) {
-      @content;
-    }
-  }
-  @else if $point==sm {
-    // 600px
-    @media (max-width: 37.5rem) {
-      @content;
-    }
-  }
-  @else if $point==xs {
-    // 400px
-    @media (max-width: 25rem) {
-      @content;
-    }
-  }
 }
 
 // Flexbox display

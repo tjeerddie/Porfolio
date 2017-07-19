@@ -1,0 +1,90 @@
+.developer {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include box-shadow('developer');
+  @include size(67%, 55%);
+
+  @include mq('desktop-height', max, height) {
+    @include size(75%, 55%);
+  }
+
+  transition: all 1s;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  &--home {
+    background-color: $home-02;
+  }
+
+  &--skill {
+    background-color: $skill-02;
+  }
+
+  &--project {
+    background-color: $project-02;
+  }
+  
+  &__img {
+    @include size(225px, 225px);
+    @include mq('desktop-wide') {
+      @include size(175px, 175px);
+    }
+    transition: all 1s;
+    margin-top: 50px;
+    border: 10px solid $white;
+    border-radius: 50%;
+  }
+
+  &__name {
+    transition: all 1s;
+    margin: 20px 0 10px 0;
+    line-height: 28px;
+    font: {
+      size: $name-size;
+      weight: $medium-weight;
+    }
+
+    @include mq('desktop-wide', min) {
+      font-size: $name-size-large;
+    }
+  }
+
+  &__type {
+    transition: all 1s;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font: {
+      size: $type-size;
+      weight: $light-weight;
+    }
+
+    @include mq('desktop-wide', min) {
+      font-size: $type-size-large;
+    }
+  }
+
+  &__spacer {
+    @include size(1px, 80%);
+    margin-top: 20px;
+    background-color: $white;
+  }
+
+  &__footer {
+    @include size(50px);
+    position: absolute;
+    bottom: 20px;
+    color: $white;
+
+    i {
+      margin: 0 15px;
+
+      &:hover {
+        transition: all 0.5s;
+        color: $🧀;
+      }
+    }
+  }
+}

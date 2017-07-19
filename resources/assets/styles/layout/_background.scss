@@ -1,0 +1,29 @@
+.background {
+  &--home {
+    @for $i from 1 through 3 {
+      @include backgroundColor('home', $i);
+    }
+  }
+  &--skill {
+    @for $i from 1 through 3 {
+      @include backgroundColor('skill', $i);
+    }
+  }
+  &--project {
+    @for $i from 1 through 3 {
+      @include backgroundColor('project', $i);
+    }
+  }
+}
+
+.wrapper {
+  @include size(100%, 100%);
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include align-content(stretch);
+
+  @include mq('phone-wide') {
+    @include flex-direction(column);
+  }
+}

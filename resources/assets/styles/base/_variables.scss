@@ -33,8 +33,18 @@ $regular-weight: 400 !default;
 $medium-weight: 500 !default;
 $black-weight: 900 !default;
 
-$root-size: 20px !default;
+$root-size: 16px !default;
 $base-size: 1rem !default;
-$name-size: 30px !default;
-$type-size: 20px !default;
-$title-size: 30px !default;
+$name-size-small: 18px !default;
+$name-size: 23px !default;
+$name-size-large: 28px !default;
+$type-size-small: 12px !default;
+$type-size: 16px !default;
+$type-size-large: 20px !default;
+$title-size: 26px !default;
+
+// Breakpoint setup for media queries
+$breakpoints: ( 'phone': 400px, 'phone-wide': 480px, 'phablet': 560px,
+        'tablet-small': 640px, 'tablet': 768px, 'tablet-wide': 1024px, 
+        'desktop-small': 1150px, 'desktop': 1270px, 'desktop-wide': 1440px, 
+        'desktop-height':765px);

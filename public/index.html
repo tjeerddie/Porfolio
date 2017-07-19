@@ -7,11 +7,12 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <!-- inject:css -->
+  <link rel="stylesheet" href="/css/main.css">
   <!-- endinject -->
 </head>
 
 <body class="background--home">
-  <main class="container">
+  <main class="wrapper">
     <div class="background-1">
       <aside class="developer developer--home">
         <img src="img/Tjeerd_Verschragen.png" class="developer__img" alt="">
@@ -19,8 +20,8 @@
         <span class="developer__type">Fullstack Developer</span>
         <span class="developer__spacer"></span>
         <footer class="developer__footer">
-          <a href="https://github.com/tjeerddie"><i class="fa fa-lg fa-github-alt" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/tjeerd-verschragen/"><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://github.com/tjeerddie" target="_blank"><i class="fa fa-lg fa-github-alt" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/tjeerd-verschragen/" target="_blank"><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i></a>
         </footer>
       </aside>
     </div>
@@ -41,104 +42,108 @@
     </div>
 
     <div class="background-3">
-      <section class="home">
-        <h1 class="home__title">I'm a Full-Stack developer...</h1>
-        <p class="home__text">
-          I'm a passionate Full-Stack Developer, with most of my 
-          knowledge being from back-end.
-          <br/><br/>
-          I like to work in a team where I can learn from colleagues and 
-          help them when necessary.
-          <br/><br/>
-          I am most experienced in the field of Javascript and PHP, further 
-          I have experience in Node.js, D3.js, Grunt, Gulp, MongoDB and MySQL.
-          I also have experience in the frameworks: Laravel, AngularJS and Vue.js.
-          <br/><br/>
-          I am a fan of Scrum/Agile, It keeps me focused amd I always know where 
-          my colleagues are working on.
-          <br/><br/>
-          In my free time I generally play games, visit friends or improve my skills.
-        </p>
-      </section>
+      <div class="container">
+        <section class="home">
+          <h1 class="home__title">I'm a Full-Stack developer...</h1>
+          <p class="home__text">
+            I'm a passionate Full-Stack Developer, with most of my 
+            knowledge being from back-end.
+            <br/><br/>
+            I like to work in a team where I can learn from colleagues and 
+            help them when necessary.
+            <br/><br/>
+            I am most experienced in the field of Javascript and PHP, further 
+            I have experience in Node.js, D3.js, Grunt, Gulp, MongoDB and MySQL.
+            I also have experience in the frameworks: Laravel, AngularJS and Vue.js.
+            <br/><br/>
+            I am a fan of Scrum/Agile, It keeps me focused and I always know where 
+            my colleagues are working on.
+            <br/><br/>
+            In my free time I generally play games, visit friends or improve my skills.
+          </p>
+        </section>
 
-      <section class="skill ghost">
-        <h1 class="skill__title">My skillset</h1>
-        <div class="skill__list">
-          <span class="skill__list-item">HTML(5)</span>
-          <span class="skill__list-item">CSS(3)</span>
-          <span class="skill__list-item">SASS</span>
-          <span class="skill__list-item">Javascript</span>
-          <span class="skill__list-item">PHP</span>
-          <span class="skill__list-item">Laravel</span>
-          <span class="skill__list-item">AngularJs</span>
-          <span class="skill__list-item">Angular</span>
-          <span class="skill__list-item">Vue.js</span>
-          <span class="skill__list-item">Node.js</span>
-          <span class="skill__list-item">D3.js</span>
-          <span class="skill__list-item">Passport.js</span>
-          <span class="skill__list-item">Express.js</span>
-          <span class="skill__list-item">Grunt</span>
-          <span class="skill__list-item">Gulp</span>
-          <span class="skill__list-item">Git</span>
-          <span class="skill__list-item">MongoDB</span>
-          <span class="skill__list-item">MySQL</span>
-          <span class="skill__list-item">Wordpress</span>
-        </div>
-      </section>
+        <section class="skill ghost">
+          <h1 class="skill__title">My skillset</h1>
+          <div class="skill__list">
+            <a class="skill__list-item" href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><span>HTML(5)</span></a>
+            <a class="skill__list-item" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank"><span>CSS(3)</span></a>
+            <a class="skill__list-item" href="http://sass-lang.com/" target="_blank"><span>SASS</span></a>
+            <a class="skill__list-item" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank"><span>Javascript</span></a>
+            <a class="skill__list-item" href="http://php.net/" target="_blank"><span>PHP</span></a>
+            <a class="skill__list-item" href="https://laravel.com/" target="_blank"><span>Laravel</span></a>
+            <a class="skill__list-item" href="https://angularjs.org/" target="_blank"><span>AngularJs</span></a>
+            <a class="skill__list-item" href="https://angular.io/" target="_blank"><span>Angular</span></a>
+            <a class="skill__list-item" href="https://vuejs.org/" target="_blank"><span>Vue.js</span></a>
+            <a class="skill__list-item" href="https://nodejs.org/en/" target="_blank"><span>Node.js</span></a>
+            <a class="skill__list-item" href="https://d3js.org/" target="_blank"><span>D3.js</span></a>
+            <a class="skill__list-item" href="http://passportjs.org/" target="_blank"><span>Passport.js</span></a>
+            <a class="skill__list-item" href="https://expressjs.com/" target="_blank"><span>Express.js</span></a>
+            <a class="skill__list-item" href="https://gruntjs.com/" target="_blank"><span>Grunt</span></a>
+            <a class="skill__list-item" href="http://gulpjs.com/" target="_blank"><span>Gulp</span></a>
+            <a class="skill__list-item" href="https://git-scm.com/" target="_blank"><span>Git</span></a>
+            <a class="skill__list-item" href="https://www.mongodb.com/" target="_blank"><span>MongoDB</span></a>
+            <a class="skill__list-item" href="https://www.mysql.com/" target="_blank"><span>MySQL</span></a>
+            <a class="skill__list-item" href="https://wordpress.com/" target="_blank"><span>Wordpress</span></a>
+          </div>
+        </section>
 
-      <section class="project ghost">
-        <h1 class="project__title">Things I worked on</h1>
-        <div class="project__list">
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+        <section class="project ghost">
+          <h1 class="project__title">Things I worked on</h1>
+          <div class="project__list">
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+              <span class="project__list-item--text">used languages: html, css, js</span>
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
+            <div class="project__list-item">
+              <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
+            </div>
           </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-          <div class="project__list-item">
-            <img class="project__list-item--img" src="img/sion the undead juggernaut by artisticphenom.jpg">
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </main>
   <!-- inject:js -->
+  <script src="/js/app.js"></script>
   <!-- endinject -->
 </body>
 

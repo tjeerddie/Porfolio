@@ -1,0 +1,39 @@
+.nav {
+  @include box-shadow('nav');
+  @include size(67%, 100%);
+
+  @include mq('desktop-height', max, height) {
+    @include size(75%, 100%);
+  }
+  
+  transition: all 1s;
+
+  &__list {
+    @include size(100%, 100%);
+    @include flexbox();
+    flex-direction: column;
+    background-color: $light-grey;
+    list-style-type: none;
+
+    &-item {
+      @include flexbox("center");
+      @include size(100px, 100%);
+      @include mq('desktop-wide', min) {
+        @include size(125px, 100%);
+      }
+
+      color: $grey;
+      transition: all 1s;
+
+      &:hover {
+        background-color: $🧀;
+        color: $white;
+      }
+
+      &--active {
+        background-color: $🧀;
+        color: $white;
+      }
+    } 
+  }
+}
