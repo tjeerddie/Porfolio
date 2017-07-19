@@ -1,0 +1,82 @@
+//@import "./normalize";
+@import "./base/variables";
+@import "./base/_mixins";
+html {
+  @include size();
+  font-size: $root-size;
+}
+
+body {
+  @include flexbox("center");
+  @include size();
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to right, $home-03, $home-03) 850px 0px no-repeat, linear-gradient(to right, $home-02, $home-02) 750px 0px no-repeat, linear-gradient(to right, $home-01, $home-01);
+  font: {
+    family: $poppins-font;
+    size: $base-size;
+    weight: $regular-weight;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  @include flexbox();
+  height: 70%;
+  width: 65%;
+  background-color: $white;
+
+  flex-flow: row wrap;
+
+  .aside {
+    @include flexbox();
+    background-color: $home-02;
+    height: 100%;
+    width: 41.20%;
+
+    main {
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav {
+      @include flexbox();
+      flex-direction: column;
+      height: 100%;
+      width: 125px;
+      background-color: $light-grey;
+      list-style-type: none;
+
+      &__item {
+        @include flexbox("center");
+        height: 125px;
+        width: 100%;
+        color: $grey;
+
+        &:hover {
+          background-color: $bright-yellow;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  section {
+    height: 100%;
+    width: 58.80%;
+  }
+}
