@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     taskOptions = config.getKeys(),
 
     localConfig = {
-        src: ['./resources/assets/js/**/*.js'],
+        src: ['./resources/assets/js/**/!(main)*.js', './resources/assets/js/main.js'],
         dest: './public/js/',
         buildFile: 'app.js',
         minifiedFile: 'app.min.js'
@@ -22,7 +22,10 @@ gulp.task('scripts', ['clean:scripts'], function () {
         .pipe(plumber({ errorHandler: config.onError }))
         .pipe(gulpif(taskOptions.sourcemaps ,sourcemaps.init()))
         .pipe(gulpif(taskOptions.concat, concat(localConfig.buildFile)))
-        .pipe(iife())
+        .pipe(iife({ 
+          params: ["window", "document"],
+          args: ["window", "document"]
+        }))
         .pipe(gulpif(taskOptions.minify, uglify()))
         .pipe(gulpif(taskOptions.minify, rename(localConfig.minifiedFile)))
         .pipe(gulpif(taskOptions.sourcemaps, sourcemaps.write('.')))

@@ -1,1 +1,3 @@
-console.log("gulp setup");
+((nav) => {
+  nav.init();
+})(nav);

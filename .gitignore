@@ -64,6 +64,8 @@ typings/
 
 ### Own gitignores ###
 # public file
+.idea
+.vscode
 public/*
 !public/index.html
-.idea
+!public/img
