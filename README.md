@@ -1,4 +1,4 @@
-# My Portfolio
+# Portfolio
 this is the source code of my portfolio.
 my portfolio contains 3 pages: about, skills, projects.
 the projects are still to be included.
