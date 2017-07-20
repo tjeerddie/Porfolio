@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     taskOptions = config.getKeys(),
 
     localConfig = {
-        src: ['./resources/assets/styles/*.scss'],
+        src: ['./resources/assets/styles/**/*.scss'],
         dest: './public/css/',
         base: './resources/assets/styles',
         minifiedFile: 'app.min.css'

@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
     localConfig = {
         src: ['./public/index.html'],
-        target: ['./public/css/*.css', './public/js/*.js'],
+        target: ['./public/css/**/*.css', './public/js/**/*.js'],
         dest: './public/'
     };
 

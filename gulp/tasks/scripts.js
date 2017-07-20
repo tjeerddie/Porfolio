@@ -22,12 +22,12 @@ gulp.task('scripts', ['clean:scripts'], function () {
         .pipe(plumber({ errorHandler: config.onError }))
         .pipe(gulpif(taskOptions.sourcemaps ,sourcemaps.init()))
         .pipe(gulpif(taskOptions.concat, concat(localConfig.buildFile)))
+        .pipe(gulpif(taskOptions.minify, concat(localConfig.minifiedFile)))
         .pipe(iife({ 
           params: ["window", "document"],
           args: ["window", "document"]
         }))
         .pipe(gulpif(taskOptions.minify, uglify()))
-        .pipe(gulpif(taskOptions.minify, rename(localConfig.minifiedFile)))
         .pipe(gulpif(taskOptions.sourcemaps, sourcemaps.write('.')))
         .pipe(gulp.dest(localConfig.dest));
 });
