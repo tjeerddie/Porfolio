@@ -1,29 +1,41 @@
 .nav {
-  @include box-shadow('nav');
-  @include size(67%, 100%);
-
+  @include size(100%, 67%);
+  @include box-shadow(0, 3px, 10px, -2px);
+  @include transition();
   @include mq('desktop-height', max, height) {
-    @include size(75%, 100%);
+    @include size(100%, 75%);
   }
-  
-  transition: all 1s;
+  @include mq('tablet') {
+    @include size();
+    @include box-shadow(0, 0, 10px, 0px);
+    position: absolute;
+    bottom: 0;
+  }
 
   &__list {
-    @include size(100%, 100%);
+    @include size();
     @include flexbox();
-    flex-direction: column;
+    @include flex-direction(column);
+
+    @include mq('tablet') {
+      @include flex-direction(row);
+    }
+
     background-color: $light-grey;
     list-style-type: none;
 
     &-item {
-      @include flexbox("center");
-      @include size(100px, 100%);
+      @include size();
+      @include flexbox('center');
       @include mq('desktop-wide', min) {
-        @include size(125px, 100%);
+        @include size(100%, 125px);
+      }
+      @include mq('tablet') {
+        @include size();
       }
 
       color: $grey;
-      transition: all 1s;
+      text-align: center;
 
       &:hover {
         background-color: $🧀;
@@ -33,6 +45,14 @@
       &--active {
         background-color: $🧀;
         color: $white;
+      }
+
+      &--phone {
+        @extend .nav__list-item;
+        display: none;
+        @include mq('tablet') {
+          @include flexbox('center');
+        }
       }
     } 
   }

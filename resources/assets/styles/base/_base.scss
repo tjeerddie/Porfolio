@@ -4,6 +4,10 @@ html {
   box-sizing: border-box;
   font-size: $root-size;
   color: $dark-grey;
+
+  @include mq('desktop-wide', min) {
+    font-size: $root-size-lg;
+  }
 }
 
 *,

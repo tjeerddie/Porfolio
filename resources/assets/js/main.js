@@ -1,3 +1,3 @@
-((nav) => {
+(function (nav) {
   nav.init();
 })(nav);

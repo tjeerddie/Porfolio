@@ -1,6 +1,10 @@
 section {
   @include size();
-  
+
+  @include mq('tablet') {
+    padding: 20px 20px 0 20px;
+  }
+
   padding: 20px 30px 0 30px;
   overflow-y: auto;
 
@@ -18,7 +22,20 @@ section {
   display: none;
 }
 
+.transparent {
+  @include mq('tablet') {
+    opacity: 0;
+  }
+}
+
 .title {
+  @include mq('tablet') {
+    color: $white; 
+  }
+  @include mq('phone-wide') {
+    font-size: 1.3em;
+  }
+
   line-height: 30px;
   text-transform: uppercase;
 
@@ -29,33 +46,49 @@ section {
 }
 
 .text {
+  @include mq('tablet') {
+    border-color: $white;
+    color: $white; 
+  }
+
   line-height: 25px;
   font-weight: $light-weight;
   margin-bottom: 0;
-
-  @include mq('desktop-wide', min) {
-    font-size: 20px;
-  }
 }
 
 .container {
-  @include size(67%, 70%);
-  @include box-shadow('section');
+  @include size(70%, 67%);
+  @include box-shadow(3px, 3px, 10px, -2px);
   @include transition();
+
   @include mq('desktop-height', max, height) {
-    @include size(75%, 70%);
+    height: 75%;
+  }
+  @include mq('desktop') {
+    width: 80%;
+  }
+  @include mq('tablet-wide') {
+    width: 85%;
+  }
+  @include mq('tablet') {
+    @include size();
+    @include box-shadow(none);
+    background-color: $transparent;
   }
 
   background-color: $white;
 }
 
-.home {
+.about {
   &__title {
     @extend .title;
   }
 
   &__text {
     @extend .text;
+    @include mq('desktop') {
+      line-height: 20px;
+    }
   }
 }
 
@@ -65,23 +98,31 @@ section {
   }
 
   &__list {
-    @include size(80%,100%);
     @include flexbox();
     @include flex-wrap(wrap);
     @include align-content(flex-start);
+    @include mq('tablet') {
+      color: $white; 
+    }
 
     text-transform: uppercase;
     color: $grey;
-
+    
     &-item {
+      @include mq('desktop-wide', min) {
+        padding: 20px;
+      }
+      @include mq('tablet-wide') {
+        padding: 10px;
+      }
+      @include mq('tablet') {
+        border-color: $white;
+      }
+
       margin: 3px;
       padding: 15px;
       border: 2px solid $grey;
       font-weight: $medium-weight;
-
-      @include mq('desktop-wide', min) {
-        padding: 20px;
-      }
 
       &:hover {
         background-color: $🧀;
@@ -96,43 +137,49 @@ section {
     @extend .title;
   }
 
-  &__list { 
-    @include size(90%,100%);
+  &__list {
+    @include size(auto, 89%);
     @include flexbox(center);
     @include flex-wrap(wrap);
     @include align-content(flex-start);
 
     &-item {
-      @include size(30%, 45%);
-      @include transition(0.5);
+      @include size(45%, 30%);
+      @include transition();
+      
+      @include mq('desktop-wide', min) {
+        @include size(calc(45% - 20px), 200px);
+      }
       @include mq('desktop') {
-        @include size(25%, 45%);
+        @include size(45%, 25%);
       }
       @include mq('desktop-small') {
-        @include size(45%, 90%);
+        @include size(90%, 45%);
       }
-      @include mq('desktop-wide', min) {
-        @include size(175px, calc(45%-20px));
-      }
-      
-      position: relative;
+
       display: inline-block;
+      position: relative;
       margin: 0px 9px 20px 9px;
       border: 1px solid $grey;
       font-weight: $medium-weight;
+      background: $project-03;
       
       &--img {
-        @include size(100%, 100%);
+        @include size();
         position: absolute;
       }
 
       &--text {
+        padding: 10px;
+        color: $white;
         display: none;
         position: absolute;
       }
 
       &:hover {
-        opacity: 0.5;
+        .project__list-item--img {
+          opacity: 0.2;
+        }
 
         .project__list-item--text {
           display: block;

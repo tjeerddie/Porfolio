@@ -1,22 +1,33 @@
 .developer {
+  @include size(55%, 67%);
   @include flexbox();
   @include flex-direction(column);
   @include align-items(center);
-  @include box-shadow('developer');
-  @include size(67%, 55%);
-
+  @include box-shadow(-3px, 3px, 10px, -2px);
+  @include transition();
+  
   @include mq('desktop-height', max, height) {
-    @include size(75%, 55%);
+    height: 75%;
+  }
+  @include mq('desktop') {
+    width: 70%;
+  }
+  @include mq('tablet-wide') {
+    width: 80%;
+  }
+  @include mq('tablet') {
+    @include size();
+    @include justify-content(center);
+    background-color: $transparent;
   }
 
-  transition: all 1s;
   position: relative;
   text-align: center;
   text-transform: uppercase;
   color: $white;
 
-  &--home {
-    background-color: $home-02;
+  &--about {
+    background-color: $about-02;
   }
 
   &--skill {
@@ -29,17 +40,22 @@
   
   &__img {
     @include size(225px, 225px);
+    @include transition();
+
     @include mq('desktop-wide') {
       @include size(175px, 175px);
     }
-    transition: all 1s;
+    @include mq('tablet') {
+      @include size(225px, 225px);
+    }
+    
     margin-top: 50px;
     border: 10px solid $white;
     border-radius: 50%;
   }
 
   &__name {
-    transition: all 1s;
+    @include transition();
     margin: 20px 0 10px 0;
     line-height: 28px;
     font: {
@@ -48,32 +64,28 @@
     }
 
     @include mq('desktop-wide', min) {
-      font-size: $name-size-large;
+      font-size: $name-size-lg;
     }
   }
 
   &__type {
-    transition: all 1s;
     line-height: 25px;
     letter-spacing: 2px;
-    font: {
-      size: $type-size;
-      weight: $light-weight;
-    }
-
-    @include mq('desktop-wide', min) {
-      font-size: $type-size-large;
-    }
+    font-weight: $light-weight;
   }
 
   &__spacer {
-    @include size(1px, 80%);
+    @include size(80%, 1px);
     margin-top: 20px;
     background-color: $white;
+
+    @include mq('tablet') {
+      @include size(0, 0);
+    }
   }
 
   &__footer {
-    @include size(50px);
+    @include size(100%, 50px);
     position: absolute;
     bottom: 20px;
     color: $white;
@@ -82,7 +94,6 @@
       margin: 0 15px;
 
       &:hover {
-        transition: all 0.5s;
         color: $🧀;
       }
     }
