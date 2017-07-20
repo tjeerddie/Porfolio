@@ -18,9 +18,9 @@
 }
 
 @mixin transition($speed: 1s, $type: all){
-  -webkit-transition: $type $speed;
-  -moz-transition: $type $speed;
-  transition: $type $speed;
+  -webkit-transition: $type $speed ease;
+  -moz-transition: $type $speed ease;
+  transition: $type $speed ease;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   transform: translateZ(0);
@@ -48,24 +48,17 @@
   }
 }
 
-@mixin mq-range($min, $max, $sizeOf: width) {
+@mixin mq-range($min, $max) {
   @if map_has_key($breakpoints, $min) {
     $min: map_get($breakpoints, $min);
   }
   @if map_has_key($breakpoints, $max) {
     $max: map_get($breakpoints, $max);
   }
-  
-  @if $sizeOf == height {
-    @media only screen and (min-device-height: $min) and (max-device-height: $max) {
-        @content;
-    }
-  } @else {
-    @media only screen and (min-device-width: $min) and (max-device-width: $max) {
-      @content;
-    }
+
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
   }
-  
 }
 
 // Flexbox display

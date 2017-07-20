@@ -25,7 +25,7 @@
     list-style-type: none;
 
     &-item {
-      @include size();
+      @include size(100%, 100px);
       @include flexbox('center');
       @include mq('desktop-wide', min) {
         @include size(100%, 125px);

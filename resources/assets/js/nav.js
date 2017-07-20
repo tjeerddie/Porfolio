@@ -10,7 +10,7 @@ var nav = (function (document) {
   var activeSection = getClassElements('about')[0];
   var background1 = getClassElements('background-1')[0];
   var background3 = getClassElements('background-3')[0];
-  var phoneSize = 800;
+  var phoneSize = 768;
 
   var init = function () {
     navItems.forEach(function(item) {

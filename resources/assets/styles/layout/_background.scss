@@ -5,6 +5,7 @@
     @include align-items(center);
     @include justify-content(flex-end);
     @include transition(1s, background-color);
+    @include transition(1s, width);
 
     @include mq('tablet') {
       @include size(100%, calc(100% - 60px));
@@ -16,6 +17,11 @@
     @include flexbox();
     @include align-items(center);
     @include transition(1s, background-color);
+    @include transition(1s, width);
+
+    @include mq-range('tablet', 'tablet-wide') {
+      @include size(70px, 100%);
+    }
 
     @include mq('tablet') {
       @include size(100%, 60px);
@@ -34,7 +40,11 @@
     @include align-items(center);
     @include justify-content(flex-start);
     @include transition(1s, background-color);
-
+    @include transition(1s, width);
+    
+    @include mq-range('tablet', 'tablet-wide') {
+      @include size(calc(63% - 70px), 100%);
+    }
     @include mq('tablet') {
       @include size(100%, calc(100% - 60px));
 
