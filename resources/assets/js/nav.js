@@ -1,5 +1,4 @@
 var nav = (function (document) {
-  console.log(1);
   var getClassElements = function (name) {
     return document.getElementsByClassName(name) ? document.getElementsByClassName(name) : "can't find the element";
   }
