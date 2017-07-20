@@ -69,4 +69,3 @@ typings/
 public/*
 !public/index.html
 !public/img
-!public/css/font-awesome.min.css
