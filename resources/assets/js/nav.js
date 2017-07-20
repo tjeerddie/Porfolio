@@ -10,18 +10,19 @@ var nav = (function (document) {
   var activeSection = getClassElements('about')[0];
   var background1 = getClassElements('background-1')[0];
   var background3 = getClassElements('background-3')[0];
+  var phoneSize = 800;
 
   var init = function () {
     navItems.forEach(function(item) {
       item.addEventListener('click', selected);
     }, this);
 
-    if (screen.width <= 768) {
+    if (body.clientWidth <= phoneSize) {
       navItems[0].click();
     }
 
     window.addEventListener("resize", function () {
-      if (screen.width > 768 && activeSection === aside) {
+      if (body.clientWidth > phoneSize && activeSection === aside) {
         navItems[1].click();
       }
     });
@@ -48,14 +49,14 @@ var nav = (function (document) {
     
     if(item.id === "home") {
       var section = aside;
-      if (screen.width <= 768) {
+      if (body.clientWidth <= phoneSize) {
         background3.className = "background-3 transparent";
       }
     } else {
       var section = getSection(item.id);
       section.classList.toggle('ghost');
-      if (screen.width <= 768) {
-        background3.className = "background-3";
+      background3.className = "background-3";
+      if (body.clientWidth <= phoneSize) {
         aside.className = "developer developer--"+item.id;
       }
     }
