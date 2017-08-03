@@ -17,13 +17,12 @@
   }
 }
 
-@mixin transition($speed: 1s, $type: all){
-  -webkit-transition: $type $speed ease;
-  -moz-transition: $type $speed ease;
-  transition: $type $speed ease;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  transform: translateZ(0);
+@mixin transition($args...){
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
 @mixin box-shadow($hl: 0, $vl: 0, $br: 0, $sr: 0) {

@@ -4,7 +4,8 @@
   "description": "A gulp setup to use for projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "prod": "gulp --env=production"
   },
   "keywords": [
     "gulp"

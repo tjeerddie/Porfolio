@@ -1,7 +1,7 @@
 .nav {
   @include size(100%, 67%);
   @include box-shadow(0, 3px, 10px, -2px);
-  @include transition();
+  @include transition(all 1s ease);
   @include mq('desktop-height', max, height) {
     @include size(100%, 75%);
   }

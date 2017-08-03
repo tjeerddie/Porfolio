@@ -4,8 +4,7 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(flex-end);
-    @include transition(1s, background-color);
-    @include transition(1s, width);
+    @include transition(background-color 1s ease, width 1s ease);
 
     @include mq('tablet') {
       @include size(100%, calc(100% - 60px));
@@ -16,8 +15,7 @@
     @include size(100px, 100%);
     @include flexbox();
     @include align-items(center);
-    @include transition(1s, background-color);
-    @include transition(1s, width);
+    @include transition(background-color 1s ease, width 1s ease);
 
     @include mq-range('tablet', 'tablet-wide') {
       @include size(70px, 100%);
@@ -39,8 +37,7 @@
     @include flexbox();
     @include align-items(center);
     @include justify-content(flex-start);
-    @include transition(1s, background-color);
-    @include transition(1s, width);
+    @include transition(background-color 1s ease, width 1s ease);
     
     @include mq-range('tablet', 'tablet-wide') {
       @include size(calc(63% - 70px), 100%);

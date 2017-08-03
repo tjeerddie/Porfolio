@@ -4,7 +4,7 @@
   @include flex-direction(column);
   @include align-items(center);
   @include box-shadow(-3px, 3px, 10px, -2px);
-  @include transition();
+  @include transition(all 1s ease);
   
   @include mq('desktop-height', max, height) {
     height: 75%;
@@ -40,7 +40,7 @@
   
   &__img {
     @include size(225px, 225px);
-    @include transition();
+    @include transition(all 1s ease);
 
     @include mq('desktop-wide') {
       @include size(175px, 175px);
@@ -55,7 +55,7 @@
   }
 
   &__name {
-    @include transition();
+    @include transition(all 1s ease);
     margin: 20px 0 10px 0;
     line-height: 28px;
     font: {

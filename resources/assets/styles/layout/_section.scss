@@ -40,7 +40,7 @@
 .container {
   @include size(70%, 67%);
   @include box-shadow(3px, 3px, 10px, -2px);
-  @include transition();
+  @include transition(all 1s ease);
 
   @include mq('desktop-height', max, height) {
     height: 75%;
@@ -146,7 +146,7 @@ section {
 
     &-item {
       @include size(45%, 30%);
-      @include transition();
+      @include transition(all 1s ease);
       
       @include mq('desktop-wide', min) {
         @include size(calc(45% - 20px), 200px);
