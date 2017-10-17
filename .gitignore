@@ -69,3 +69,4 @@ typings/
 public/*
 !public/index.html
 !public/img
+dev/node_modules/

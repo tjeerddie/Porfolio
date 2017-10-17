@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify-es').default,
     iife = require('gulp-iife'),
     rename = require('gulp-rename'),
 
@@ -23,10 +23,7 @@ gulp.task('scripts', ['clean:scripts'], function () {
         .pipe(gulpif(taskOptions.sourcemaps ,sourcemaps.init()))
         .pipe(gulpif(taskOptions.concat, concat(localConfig.buildFile)))
         .pipe(gulpif(taskOptions.minify, concat(localConfig.minifiedFile)))
-        .pipe(iife({ 
-          params: ["window", "document"],
-          args: ["window", "document"]
-        }))
+        .pipe(iife({params: ["window", "document"], args: ["window", "document"]}))
         .pipe(gulpif(taskOptions.minify, uglify()))
         .pipe(gulpif(taskOptions.sourcemaps, sourcemaps.write('.')))
         .pipe(gulp.dest(localConfig.dest));
