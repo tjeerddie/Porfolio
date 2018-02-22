@@ -1,10 +1,10 @@
 # Portfolio
-this is the source code of my portfolio.
-my portfolio contains 3 pages: about, skills, projects.
+this is the source code of my portfolio.  
+my portfolio contains 3 pages: about, skills, projects.  
 
-things to do
-I want to use a font-end framework instead of plain html and js.
-I want to make a backend with a database to atleast store all my data instead of having everything just in the html.
+things to do:  
+I want to use a font-end framework instead of plain html and js.  
+I want to make a backend with a database to atleast store all my data instead of having everything just in the html.  
 
 ## Serving
 You can use `gulp` or `gulp --env=development` to start the project for development.
